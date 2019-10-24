@@ -969,8 +969,8 @@
 
   function quoteColOrTbl(expr) {
     //补丁 Start 如果表达式是一个数字则直接返回数字处理
-    //if(Object.prototype.toString.call(expr) === '[object Number]')
-    //  return '' + expr;
+    if(Object.prototype.toString.call(expr) === '[object Number]')
+      return '' + expr;
     //补丁 End 如果表达式是一个数字则直接返回数字处理
 
     var prefix = '';
